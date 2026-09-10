@@ -96,15 +96,13 @@ clustering, and no jumps. Real price series have all three.
 
 ```bash
 python simulate.py       # one day
-python experiment.py     # the full comparison table
+python Experiment.py     # the full comparison table
 python plot_results.py   # regenerate the histogram
 ```
 
 ## Sources
 
 - Avellaneda & Stoikov (2008), *High-frequency trading in a limit order book*
-- Ho & Stoll (1981), *Optimal Dealer Pricing Under Transactions and Return
-  Uncertainty*
 - [Hummingbot's guide to the Avellaneda–Stoikov strategy](https://hummingbot.org/blog/guide-to-the-avellaneda--stoikov-strategy/)
 
 The model came from these; the implementation is my own.
