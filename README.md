@@ -62,6 +62,7 @@ struggled to resolve the effect at all.
 Each row pair shares a spread width. 200 simulated days per configuration.
 
 | config | spread | mean | std | 5th pct | worst | max inv | trades |
+ |---|---|---|---|---|---|---|---|
 | naive | 0.707 | 35.70 | 38.40 | −22.24 | −83.39 | 13.1 | 107.3 |
 | AS γ=1 | 0.707 | 35.20 | 27.71 | −10.79 | −55.73 | 10.3 | 107.8 |
 | naive | 0.626 | 34.67 | 41.72 | −21.94 | −89.18 | 13.6 | 117.8 |
