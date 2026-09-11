@@ -79,8 +79,7 @@ Each row pair shares a spread width. 200 simulated days per configuration.
 | AS γ=25 | 0.445 | 18.20 | 8.05 | +6.18 | −4.75 | 5.2 | 181.9 |
 
 Variance reduction is roughly free up to γ≈2 and cheap up to γ≈5, where the
-5th-percentile day turns profitable. Past γ≈10 mean profit falls sharply
-while standard deviation barely improves.
+5th-percentile day turns profitable.past γ≈10 you keep buying variance reduction, but the price in mean profit rises steeply.
 
 ## Limitations
 
