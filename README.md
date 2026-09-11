@@ -42,7 +42,7 @@ Three components:
 - **`market_maker.py`** — the bot. Computes the reservation price and optimal
   spread, tracks inventory and cash.
 - **`simulate.py`** — runs one day and returns its metrics.
-- **`experiment.py`** — the comparison across risk-aversion values.
+- **`Experiment.py`** — the comparison across risk-aversion values.
 
 ## Method
 
@@ -62,15 +62,21 @@ struggled to resolve the effect at all.
 Each row pair shares a spread width. 200 simulated days per configuration.
 
 | config | spread | mean | std | 5th pct | worst | max inv | trades |
- |---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
+| naive | 0.817 | 35.99 | 37.71 | −23.88 | −79.80 | 12.1 | 93.6 |
+| AS γ=0.1 | 0.817 | 36.09 | 35.99 | −23.28 | −78.31 | 11.7 | 93.8 |
+| naive | 0.762 | 35.51 | 38.50 | −20.55 | −94.57 | 12.6 | 100.3 |
+| AS γ=0.5 | 0.762 | 36.12 | 31.69 | −13.18 | −55.25 | 11.2 | 100.5 |
 | naive | 0.707 | 35.70 | 38.40 | −22.24 | −83.39 | 13.1 | 107.3 |
 | AS γ=1 | 0.707 | 35.20 | 27.71 | −10.79 | −55.73 | 10.3 | 107.8 |
 | naive | 0.626 | 34.67 | 41.72 | −21.94 | −89.18 | 13.6 | 117.8 |
 | AS γ=2 | 0.626 | 34.87 | 22.60 | −0.57 | −53.42 | 9.3 | 119.8 |
 | naive | 0.500 | 32.81 | 45.85 | −25.32 | −168.97 | 14.7 | 136.4 |
-| AS γ=5 | 0.500 | 31.32 | 15.56 | +9.45 | −27.02 | 7.6 | 142.2 |
+| AS γ=5 | 0.500 | 31.30 | 15.55 | +9.45 | −27.02 | 7.6 | 142.2 |
 | naive | 0.428 | 30.97 | 49.10 | −31.32 | −136.85 | 15.0 | 148.5 |
-| AS γ=10 | 0.428 | 26.20 | 11.89 | +7.34 | −15.71 | 6.5 | 159.9 |
+| AS γ=10 | 0.428 | 26.57 | 11.40 | +9.33 | −15.71 | 6.4 | 162.0 |
+| naive | 0.445 | 31.25 | 49.07 | −30.99 | −137.98 | 14.9 | 145.6 |
+| AS γ=25 | 0.445 | 18.20 | 8.05 | +6.18 | −4.75 | 5.2 | 181.9 |
 
 Variance reduction is roughly free up to γ≈2 and cheap up to γ≈5, where the
 5th-percentile day turns profitable. Past γ≈10 mean profit falls sharply
